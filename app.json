@@ -1,7 +1,7 @@
 {
-  "name": "Cool guy bot",
-  "description": "Basic Groupme Bot written in Node",
-  "repository": "https://github.com/petemcgrath/cool-guy-bot",
+  "name": "Wyatt Bot",
+  "description": "Basic GroupMe Bot written in Node",
+  "repository": "https://github.com/drumms/gmbot",
   "logo": "http://www.tailgate365.com/wp-content/uploads/2011/06/tom-hanks-906.jpg",
   "keywords": []
 }
