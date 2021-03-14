@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^Will Morland$/;
+      botRegex = /^40732693$/;
 
-  if(request.name && botRegex.test(request.name)) {
+  if(request.user_id && botRegex.test(request.user_id)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
