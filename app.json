@@ -1,7 +1,7 @@
 {
-  "name": "Wyatt",
+  "name": "Test Bot",
   "description": "Basic GroupMe Bot written in Node",
-  "repository": "https://github.com/drumms/gmbot",
+  "repository": "https://github.com/leifgullstad/gmbot",
   "logo": "http://www.tailgate365.com/wp-content/uploads/2011/06/tom-hanks-906.jpg",
   "keywords": []
 }
