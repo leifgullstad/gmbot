@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^22686489$/;
+      botRegex = /^74942548$/;
 
-  if(false/*request.user_id && botRegex.test(request.user_id)*/) {
+  if(request.user_id && botRegex.test(request.user_id)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -29,7 +29,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "Eat a dick, Cole"
+    "text" : "Leif has a tiny penis"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
