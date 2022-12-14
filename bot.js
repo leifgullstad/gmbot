@@ -5,11 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^74942548$/;
+      leifRegex = /^74942548$/,
+      coleRegex = /^33350163$/;
 
-  if(request.user_id && botRegex.test(request.user_id)) {
+  if(request.user_id && (leifRegex.test(request.user_id) || coleRegex.test(request.user_id))) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(request.name);
     this.res.end();
   } else {
     console.log("don't care");
@@ -18,7 +19,7 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(user_name) {
   var botResponse, options, body, botReq;
 
   options = {
@@ -29,7 +30,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "Leif has a tiny penis"
+    "text" : user_name + " has a tiny penis"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
