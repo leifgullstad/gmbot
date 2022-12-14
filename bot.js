@@ -12,13 +12,17 @@ var leifRegex = /^74942548$/;
 var simonRegex = /^39611527$/;
 
 function getName(user_id) {
-    if(leifRegex.test(user_id)) return "Leif"
+    if (keithRegex.test(user_id)) return "Keith"
+    if (kirschRegex.test(user_id)) return "Kirsch"
+    if (timRegex.test(user_id)) return "Tim"
+    if (daveRegex.test(user_id)) return "Dave"
+    if (simonRegex.test(user_id)) return "Simon"
 }
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
 
-  if (request.user_id && (keithRegex.test(request.user_id) || kirschRegex.test(request.user_id) || leifRegex.test(request.user_id)
+  if (request.user_id && (keithRegex.test(request.user_id) || kirschRegex.test(request.user_id)
                           || timRegex.test(request.user_id) || daveRegex.test(request.user_id) || simonRegex.test(request.user_id))) {
     this.res.writeHead(200);
     postMessage(getName(request.user_id));
